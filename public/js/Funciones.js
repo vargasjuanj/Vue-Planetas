@@ -58,3 +58,14 @@ datos.sort((a,b)=>b.diametro-a.diametro)
 datos.sort((a,b)=>a.nombre>b.nombre ?1 : -1)
 //Descendente
 datos.sort((a,b)=>b.nombre>a.nombre ?1 : -1)
+
+//BUSQUEDA
+
+
+ //No llevan parametros las propiedades computadas, ni tampoco pueden ser funcion flecha, pero la transofrme porque daba error
+datosFiltrados=()=>{     
+ // let buscado=this.$route.params.buscado //parametro de ruta en vue
+  
+  return buscado==undefined ? datos : datos.filter(element=>element.descripcion.toLowerCase().includes(buscado.toLowerCase()))
+        
+       }
