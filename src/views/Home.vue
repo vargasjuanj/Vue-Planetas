@@ -24,14 +24,13 @@
 import datos from '../assets/json/sistema_solar.json'
 
 export default {
-  mounted(){
-  }
-  ,
-  computed:{
-     datosFiltrados(){      
+
+
+  computed:{ //Si no meto datos en data() o en una propiedad computada, y lo pongo asi no mas en el html no va a detectar el array datos.
+     datosFiltrados(){      //No llevan parametros las propiedades computadas
 let buscado=this.$route.params.buscado
 
-return buscado==undefined ? datos : datos.filter(element=>element.descripcion.toLowerCase().includes(buscado))
+return buscado==undefined ? datos : datos.filter(element=>element.descripcion.toLowerCase().includes(buscado.toLowerCase()))
       
      }
   }

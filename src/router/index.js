@@ -6,7 +6,7 @@ Vue.use(VueRouter)
 
   const routes = [
     {
-      path: '/',
+      path: '/', //Este es necesario para que al estar en la ruta raiz, carguen todas las tarjetas, es decir tiene que existir esta ruta, porque si dejo solo la que tiene un parametro, cuando este en la raiz, en router no va a encontrar "/" sino /:buscado
       name: 'Home',
       component: Home
     },
@@ -24,7 +24,7 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/Detalle.vue')
   },
   {
-    path: '/ordenados/diametro',
+    path: '/ordenados/diametro', //Para que no se confunda con /:buscado uso otro slash o barra diagonal
     name: 'OrdenadosPorDiametro',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
