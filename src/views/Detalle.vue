@@ -3,7 +3,7 @@
 <b-container class=" border border-dark">
   <b-row>
     <b-col>
-        <b-row><img :src="`/img/${encontrado.img}`"> </b-row>
+        <b-row><img :src="require(`../assets//img/${encontrado.img}`)"> </b-row>
 
         <b-row class="border-top bordar-dark" >{{encontrado.nombre}}</b-row>
    </b-col>

@@ -2,10 +2,10 @@
   <div class="container">
 <div class="row">
 <div class="col-3 h-100 mb-3" v-for="element in datosFiltrados"  :key="element.codigo" >
-
+ <!-- En componente detalle tambien va-> Si no colocaba require no me cargaba la imagen, pero si la imagen hubiera estado en la carpeta publica, tan solo con poner /img/${element.img} ya me lo tomaba -->
   <b-card 
     :title="element.nombre"
-    :img-src="`/img/${element.img}`"
+    :img-src="require(`../assets/img/${element.img}`)"
     img-alt="Image"
     img-top
     tag="article"
